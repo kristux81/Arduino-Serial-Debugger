@@ -17,6 +17,10 @@ The flow uses Serial and Dashboard Nodes. These must be pre-installed on Node-Re
 
 Code : https://github.com/kristux81/Arduino-Serial-Debugger/tree/master/Node-Red
 
+![Debugger Node Red Flow](https://github.com/kristux81/Arduino-Serial-Debugger/blob/master/Debugger%20flow.jpg)
+
 # The Execution
 
 Arduino must be connected to Computer via USB, with Debugger program running on the computer. The debugger firmware inside the Arduino periodically sends a data string (usually less than 256 bytes) over the USB Serial. These data messages have a frame closing which helps the receiving node identify end-of-message. The Node-red flow grabs these messages and parses them to populate inside a mapped html element on the dashboard. Since the dashboard is based on Angular, no external refresh is required on the UI. It makes easier for the programmers to see the states of each I/O ports without having to painfully watch the running console.
+
+![Debugger UI](https://github.com/kristux81/Arduino-Serial-Debugger/blob/master/Debugger%20UI.jpg)
